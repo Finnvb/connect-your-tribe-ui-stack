@@ -57,12 +57,12 @@ function fetchNameFromAPI() {
 }
 
 fetchNameFromAPI();
-
+postAndRenderData();
 
 
 
 function postAndRenderData() {
-  // 1. all bindings in the local scope for this function
+ 
   const url = `${baseURL}/member`
   const options = {
     method: 'PATCH',
@@ -79,12 +79,12 @@ function postAndRenderData() {
       surname: "Bekkum",
       avatar: "https://avatars.githubusercontent.com/u/26089533?s=400&u=e586804b0a9f377d8f8198b00f5dccaca4c674f2&v=4",
       githubHandle: "Finnvb",
-      bio: "Hallo, ik ben Finn van Bekkum. Mijn hobbies zijn gamen, programmeren en voetbal.",
+      bio: "Hallo, ik ben Finn van Bekkum. Ik ben eerstejaarsstudent op de FDND opleiding.",
       url: "\r"
     })
   }
 
-  // 2. The logic
+
   fetch(url, options).then(response => response.json())
     .then(data => {
       console.log(data)
@@ -93,5 +93,7 @@ function postAndRenderData() {
     })
 }
 
-postAndRenderData();
+
 // -------------------- API handling --------------------
+
+
