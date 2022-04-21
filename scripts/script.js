@@ -1,11 +1,13 @@
-// -------------------- Flip card --------------------
-const card = document.getElementsByClassName("container");
+// -------------------- Flip card ----------------------
 
-card[0].addEventListener('click', flip);
+const card = document.querySelector(".container");
+
+card.addEventListener('click', flip);
 
 function flip(event) {
   const element = event.currentTarget;
-  if (element.className === "container") {
+  if (element.className === "showCard" || "container") {
+
 
     if (element.style.transform == "rotateY(180deg)") {
       element.style.transform = "rotateY(0deg)";
@@ -15,9 +17,25 @@ function flip(event) {
     }
   }
 };
-// -------------------- Flip card --------------------
+// -------------------- Flip card ----------------------
 
 
+
+// -------------------- preloader -------------------------
+const preloader = document.querySelector(".preloader");
+preloader.classList.toggle("preloaderEnabled");
+
+function hidePreloader() {
+  setTimeout(() => {
+    preloader.style.display = 'flex';
+    preloader.style.opacity = 0;
+    preloader.style.display = 'none';
+    card.classList.add('show');
+  }, 2000)
+}
+
+hidePreloader();
+// -------------------- preloader -------------------------
 
 
 
@@ -62,7 +80,7 @@ postAndRenderData();
 
 
 function postAndRenderData() {
- 
+
   const url = `${baseURL}/member`
   const options = {
     method: 'PATCH',
@@ -90,10 +108,23 @@ function postAndRenderData() {
       console.log(data)
     }).catch(err => {
       console.log(err)
+      errorHandling();
+      errorText.innerText = err;
     })
 }
-
 
 // -------------------- API handling --------------------
 
 
+// -------------------- error handling --------------------
+const error = document.querySelector(".error");
+const errorText = document.querySelector("#errorText");
+function errorHandling(){
+
+ card.style.display = 'none';
+ error.classList.remove('error')
+error.classList.add('show');
+preloader.style.display = 'none';
+ 
+}
+// -------------------- error handling --------------------

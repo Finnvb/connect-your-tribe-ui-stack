@@ -3,8 +3,17 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+   
 }
 
+
+:root {
+	--blueberry: #050542;
+	--turqoise : #66e5bf;
+	--lavender : #a675f5;
+	--blue: #18a1e3;
+}
 
 body {
     display: flex;
@@ -23,13 +32,14 @@ body {
 }
 
 .container {
-
+    display: none;
     width: 32rem;
     height: 20rem;
     transition: transform 1.5s;
     transform-style: preserve-3d;
     cursor: pointer;
     perspective: 1000px;
+    
 
 }
 
@@ -138,3 +148,98 @@ noscript p{
     border-radius: 10px;
     max-width: 100%;
 }
+
+.show{
+    display: block;
+    /* animation: show 1s linear; */
+}
+
+
+
+@keyframes show{
+  0%{
+      opacity: 0;
+  }
+  25%{
+    opacity: 0.25;
+}
+  50%{
+    opacity: 0.5;
+}
+75%{
+    opacity: 0.75;
+}
+100%{
+    opacity: 1;
+}
+}
+
+
+/* preloader */
+
+
+
+.preloader {
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+div > div {
+	width: 3vw;
+	height: 3vw;
+	border-radius: 100%;
+	margin: 2vw;
+	background-image: linear-gradient(145deg, rgba(255,255,255,0.5) 0%, rgba(0,0,0,0) 100%);
+	animation: bounce 1.5s 0.5s linear infinite;
+}
+.yellow {
+	background-color: var(--blueberry);
+}
+
+.red {
+	background-color: var(--turqoise);
+	animation-delay: 0.1s;
+}
+
+.blue {
+	background-color: var(--lavender);
+	animation-delay: 0.2s;
+}
+
+.violet {
+	background-color: var(--blue);
+	animation-delay: 0.3s;
+}
+
+@keyframes bounce {
+	0%, 50%, 100% {
+		transform: scale(1);
+		/* filter: blur(0px); */
+	}
+	25% {
+		transform: scale(0.6);
+		/* filter: blur(3px); */
+	}
+	75% {
+		/* filter: blur(3px); */
+		transform: scale(1.4);
+	}
+}
+
+.preloader p{
+    position: absolute;
+    margin-top: 7rem;
+    font-weight: bold;
+}
+
+
+
+.preloaderEnabled{
+    display: flex;
+}
+
+.error{
+    display: none;
+  
+}
+
