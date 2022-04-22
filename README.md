@@ -19,15 +19,17 @@ In deze repo staan schetsen van de UI Stack van mijn visitekaartje.
 
 ## Code 
 
-### HTML
-
- <div class="preloader">
+HTML
+``` 
+<div class="preloader">
         <div class="yellow"></div>
         <div class="red"></div>
         <div class="blue"></div>
         <div class="violet"></div>
         <p>Loading, please wait..</p>
       </div>
+```    
+
 
 
 ## Licentie
