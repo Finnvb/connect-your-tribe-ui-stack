@@ -1,13 +1,23 @@
-> _Fork_ deze leertaak en ga aan de slag. Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
 
-# Titel
-<!-- Geef je project een titel en schrijf in één zin wat het is -->
+# Visitekaartje 2.0 - UI Stack
+In deze repo staan schetsen van de UI Stack van mijn visitekaartje.
 
-## Wireflow
-<!-- Toon de wireflow -->
+## Wireflow & Breakdown
 
-## Breakdown
-<!-- Toon de breakdown schets -->
+# Empty State
+
+![20220422_105525](https://user-images.githubusercontent.com/26089533/164679343-66a082c8-36cd-4800-9f5f-e5716f0529a9.jpg)
+
+# Error State
+![20220422_110334](https://user-images.githubusercontent.com/26089533/164679402-c5c1bcc9-58c0-41ab-a013-f7b3fc565b79.jpg)
+
+# Loading State
+
+![20220422_111010](https://user-images.githubusercontent.com/26089533/164679466-a764e3a0-f427-464c-b73a-6e675aabc9da.jpg)
+
+
+
+
 
 ## Code 
 <!-- Leg de code uit die je gebruikt om de verschillende states van de UI-Stack te tonen -->
