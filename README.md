@@ -1,6 +1,6 @@
 
 # Visitekaartje 2.0 - UI Stack
-In deze repo staan schetsen van de UI Stack van mijn visitekaartje.
+In deze repo staan schetsen en code snippets van de UI Stack van mijn visitekaartje.
 
 ## Wireflow & Breakdown
 
