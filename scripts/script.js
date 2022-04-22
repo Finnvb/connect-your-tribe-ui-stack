@@ -119,6 +119,7 @@ function postAndRenderData() {
 // -------------------- error handling --------------------
 const error = document.querySelector(".error");
 const errorText = document.querySelector("#errorText");
+
 function errorHandling(){
 
  card.style.display = 'none';
