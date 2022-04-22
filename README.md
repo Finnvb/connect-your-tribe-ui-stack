@@ -28,8 +28,22 @@ HTML
         <div class="violet"></div>
         <p>Loading, please wait..</p>
       </div>
-```    
+```
+```
+    <noscript>
+        <img class="noJSImage" src="/assets/giphy.gif" alt="oops">
+        <p>Whoops!</p>
+        <p> Please turn on Javascript to view this page.</p>
 
+    </noscript>
+```
+```
+    <div class="error">
+        <h2>Whoops... Something went wrong</h2>
+        <p>Couldn't fetch data from API</p>
+        <p id="errorText"></p>
+      </div>  
+```
 
 
 ## Licentie
