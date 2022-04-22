@@ -19,7 +19,7 @@ In deze repo staan schetsen van de UI Stack van mijn visitekaartje.
 
 ## Code 
 
-HTML
+### HTML
 ``` 
 <div class="preloader">
         <div class="yellow"></div>
@@ -47,7 +47,7 @@ Als de API geen response terugstuurt, wordt er een div met class error aangeroep
       </div>  
 ```
 
-Javascript
+### Javascript
 
 Met querySelector haal ik de div met class preloader uit de DOM en deze stop ik in een const (preloader). In de hidePreloader functie wordt de preloader getoond voor 2 seconden. Daarna wordt het visitekaartje weergegeven.
 ```
@@ -64,6 +64,34 @@ function hidePreloader() {
 }
 
 hidePreloader();
+```
+Wanneer de fetch functie de json data niet kan ophalen uit de API wordt de catch functie uitgevoerd. Hierin wordt errorHandling(); aangeroepen en krijgt errorText de textwaarde van het err object. 
+```
+ fetch(url, options).then(response => response.json())
+    .then(data => {
+      console.log(data)
+    }).catch(err => {
+      console.log(err)
+      errorHandling();
+      errorText.innerText = err;
+    })
+}
+
+// -------------------- API handling --------------------
+
+
+// -------------------- error handling --------------------
+const error = document.querySelector(".error");
+const errorText = document.querySelector("#errorText");
+
+function errorHandling(){
+
+ card.style.display = 'none';
+ error.classList.remove('error')
+error.classList.add('show');
+preloader.style.display = 'none';
+ 
+}
 ```
 
 ## Licentie
