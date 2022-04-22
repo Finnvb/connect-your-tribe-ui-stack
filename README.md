@@ -18,7 +18,16 @@ In deze repo staan schetsen van de UI Stack van mijn visitekaartje.
 
 
 ## Code 
-<!-- Leg de code uit die je gebruikt om de verschillende states van de UI-Stack te tonen -->
+
+### HTML
+
+ <div class="preloader">
+        <div class="yellow"></div>
+        <div class="red"></div>
+        <div class="blue"></div>
+        <div class="violet"></div>
+        <p>Loading, please wait..</p>
+      </div>
 
 
 ## Licentie
