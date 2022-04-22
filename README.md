@@ -20,6 +20,8 @@ In deze repo staan schetsen van de UI Stack van mijn visitekaartje.
 ## Code 
 
 ### HTML
+
+Een div met class preloader dat wordt weergegeven wanneer je de browser refresht.
 ``` 
 <div class="preloader">
         <div class="yellow"></div>
