@@ -65,7 +65,7 @@ function hidePreloader() {
 
 hidePreloader();
 ```
-Wanneer de fetch functie de json data niet kan ophalen uit de API wordt de catch functie uitgevoerd. Hierin wordt errorHandling(); aangeroepen en krijgt errorText de textwaarde van het err object. 
+Wanneer de fetch functie de json data niet kan ophalen uit de API wordt de catch functie uitgevoerd. Hierin wordt errorHandling() aangeroepen en krijgt errorText de textwaarde van het err object. 
 ```
  fetch(url, options).then(response => response.json())
     .then(data => {
