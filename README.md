@@ -29,6 +29,7 @@ HTML
         <p>Loading, please wait..</p>
       </div>
 ```
+Als er geen Javascript wordt herkent door de browser, wordt alle code in de noscript tag uitgevoerd.
 ```
     <noscript>
         <img class="noJSImage" src="/assets/giphy.gif" alt="oops">
@@ -37,6 +38,7 @@ HTML
 
     </noscript>
 ```
+Als de API geen response terugstuurt, wordt er een div met class error aangeroepen. Dit kan gebeuren door een fout in de URL van de API of met de code van de API. In deze div staat ook wat voor soort error je hebt.
 ```
     <div class="error">
         <h2>Whoops... Something went wrong</h2>
@@ -45,6 +47,24 @@ HTML
       </div>  
 ```
 
+Javascript
+
+Met querySelector haal ik de div met class preloader uit de DOM en deze stop ik in een const (preloader). In de hidePreloader functie wordt de preloader getoond voor 2 seconden. Daarna wordt het visitekaartje weergegeven.
+```
+const preloader = document.querySelector(".preloader");
+preloader.classList.toggle("preloaderEnabled");
+
+function hidePreloader() {
+  setTimeout(() => {
+    preloader.style.display = 'flex';
+    preloader.style.opacity = 0;
+    preloader.style.display = 'none';
+    card.classList.add('show');
+  }, 2000)
+}
+
+hidePreloader();
+```
 
 ## Licentie
 
